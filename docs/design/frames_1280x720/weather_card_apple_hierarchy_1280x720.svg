@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="skyGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#3D2B1F"/>
+      <stop offset="35%" stop-color="#C78434"/>
+      <stop offset="60%" stop-color="#E29F44"/>
+      <stop offset="78%" stop-color="#E8A749"/>
+      <stop offset="90%" stop-color="#6E4422"/>
+      <stop offset="100%" stop-color="#1E140C"/>
+    </linearGradient>
+    <linearGradient id="weatherGraphiteGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#454B53"/>
+      <stop offset="100%" stop-color="#6C7580"/>
+    </linearGradient>
+    <filter id="textDropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Wallpaper Background -->
+  <rect width="1280" height="720" fill="url(#skyGrad)"/>
+
+  <!-- Clock & Date -->
+  <g transform="translate(64, 290)">
+    <text x="0" y="0" font-family="'Lato', sans-serif" font-weight="300" font-size="94" fill="#FFFFFF" letter-spacing="-1.5" filter="url(#textDropShadow)">04:32</text>
+    <text x="2" y="32" font-family="'Lato', sans-serif" font-weight="500" font-size="20" fill="#F4F7FB" letter-spacing="0.2" filter="url(#textDropShadow)">Segunda-feira · 23/11/2026</text>
+  </g>
+
+  <!-- Top Action Shortcuts -->
+  <g transform="translate(860, 48)">
+    <rect x="0" y="0" width="118" height="36" rx="14" fill="#1C2430" fill-opacity="0.8" stroke="#70E6CF" stroke-width="1"/>
+    <text x="42" y="23" font-family="'Segoe UI', sans-serif" font-size="13" fill="#FFFFFF">Paisagens</text>
+
+    <rect x="126" y="0" width="102" height="36" rx="14" fill="#1C2430" fill-opacity="0.8" stroke="#F0D693" stroke-width="1"/>
+    <text x="160" y="23" font-family="'Segoe UI', sans-serif" font-size="13" fill="#FFFFFF">Ajustes</text>
+
+    <rect x="236" y="0" width="112" height="36" rx="14" fill="#1C2430" fill-opacity="0.8" stroke="#9CCBFF" stroke-width="1"/>
+    <text x="274" y="23" font-family="'Segoe UI', sans-serif" font-size="13" fill="#FFFFFF">Standby</text>
+  </g>
+
+  <!-- Telemetry Row -->
+  <g transform="translate(1010, 96)">
+    <text x="0" y="16" font-family="'Segoe UI', sans-serif" font-size="13" fill="#FFFFFF">Wi-Fi Forte</text>
+    <text x="110" y="16" font-family="'Segoe UI', sans-serif" font-size="13" fill="#FFA726">19 / 100</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- WEATHER CARD (360×112dp at X:856, Y:259)    -->
+  <!-- ========================================== -->
+  <g transform="translate(856, 259)" id="weather_box">
+    <!-- Card Background -->
+    <rect width="360" height="112" rx="20" fill="url(#weatherGraphiteGrad)" stroke="rgba(255,255,255,0.28)" stroke-width="1"/>
+
+    <!-- Left Zone: Width 118dp, Center X=71 -->
+    <text x="71" y="24" text-anchor="middle" font-family="'Lato', sans-serif" font-weight="700" font-size="15" fill="#FFFFFF" filter="url(#textDropShadow)">Nublado</text>
+    <!-- 3D Cloud Graphic Representation -->
+    <g transform="translate(38, 36)">
+      <path d="M 12,32 C 8,32 5,29 5,25 C 5,21.5 7.5,18.5 11,18.2 C 12.5,13.5 17,10 22.5,10 C 26.5,10 30,12 31.5,15.5 C 32.5,15.2 33.5,15 34.5,15 C 38,15 41,17.5 41,21 C 41,22 40.8,22.8 40.5,23.5 C 42.5,25 44,27.5 44,30 C 44,33.5 41,36 38,36 L 12,36 Z" fill="#ECEFF1" filter="url(#textDropShadow)"/>
+      <path d="M 24,24 C 21,24 18,22 18,19 C 18,16.5 20,14.5 22.5,14.5 C 23.5,11.5 26.5,9.5 29.5,9.5 C 32.5,9.5 35,11 36,12.5 C 37,12.2 38,12 39,12 C 41.5,12 43.5,14 43.5,16.5 C 43.5,17 43.4,17.5 43.2,18 C 45,19 46,20.5 46,22.5 C 46,25 44,27 41.5,27 L 24,27 Z" fill="#90A4AE" fill-opacity="0.6"/>
+    </g>
+
+    <!-- Right Zone: Starts at X=138 -->
+    <text x="138" y="26" font-family="'Lato', sans-serif" font-weight="700" font-size="17" fill="#FFFFFF" filter="url(#textDropShadow)">Joinville</text>
+    <text x="138" y="42" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="9" fill="#B8CADB">AGORA</text>
+    <text x="138" y="80" font-family="'Lato', sans-serif" font-weight="700" font-size="46" fill="#FFFFFF" filter="url(#textDropShadow)">21°</text>
+    <text x="138" y="99" font-family="'Lato', sans-serif" font-weight="500" font-size="12" fill="#DDE7F2" filter="url(#textDropShadow)">Máx 28° • Mín 21°</text>
+    <text x="138" y="109" font-family="'Arial', sans-serif" font-size="7" fill="#8295A8">Clima: Open-Meteo · CC BY 4.0</text>
+  </g>
+
+  <!-- PhilcoOS & TV Aberta Label -->
+  <g transform="translate(1216, 428)">
+    <text x="0" y="0" font-family="'Segoe UI', sans-serif" font-size="13" fill="#DDEEF2" text-anchor="end">PHILCO  /  ULTRA 777    •    TV ABERTA ATIVA</text>
+  </g>
+</svg>

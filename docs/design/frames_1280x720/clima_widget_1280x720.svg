@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060B14"/>
+      <stop offset="100%" stop-color="#0B1324"/>
+    </linearGradient>
+
+    <!-- Dark Glass Spec for Weather (Joinville / Open-Meteo) -->
+    <linearGradient id="darkGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B1220" stop-opacity="0.90"/>
+      <stop offset="100%" stop-color="#060B14" stop-opacity="0.84"/>
+    </linearGradient>
+
+    <linearGradient id="frost" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Section Title -->
+  <g transform="translate(64, 60)">
+    <text x="0" y="30" font-family="Roboto, sans-serif" font-weight="700" font-size="28" fill="#FFFFFF">Glass &amp; Aurora 2.0 — Especificação do Card de Clima</text>
+    <text x="0" y="58" font-family="Roboto, sans-serif" font-size="15" fill="#80DEEA">Dimensões aprovadas: 320dp de largura × 104dp de altura • Open-Meteo HTTPS / TLS 1.2</text>
+  </g>
+
+  <!-- 1. Card de Clima Ativo (Parcialmente Nublado - Estado em Execução na TV) -->
+  <g transform="translate(64, 160)">
+    <!-- Background Card -->
+    <rect width="420" height="136" rx="20" fill="url(#darkGlass)" stroke="url(#frost)" stroke-width="1.8"/>
+    <!-- Weather Glyph: Partly Cloudy Day -->
+    <g transform="translate(32, 34)">
+      <!-- Sun -->
+      <circle cx="28" cy="22" r="16" fill="#FFB300"/>
+      <!-- Cloud -->
+      <path d="M 22,54 C 14,54 8,47 8,40 C 8,34 13,30 18,30 C 21,21 30,17 38,21 C 45,17 54,22 54,30 C 60,30 65,34 65,40 C 65,47 60,54 53,54 Z" fill="#ECEFF1" fill-opacity="0.95"/>
+    </g>
+    <!-- Temperature & Condition -->
+    <text x="120" y="60" font-family="Roboto, sans-serif" font-weight="500" font-size="44" fill="#FFFFFF">21°</text>
+    <text x="194" y="52" font-family="Roboto, sans-serif" font-weight="500" font-size="18" fill="#E0E0E0">Parcialmente nublado</text>
+    <text x="120" y="92" font-family="Roboto, sans-serif" font-weight="400" font-size="14" fill="#90A4AE">Joinville, SC • Atualizado 02:20</text>
+    <text x="120" y="112" font-family="Roboto, sans-serif" font-size="12" fill="#546E7A">Intervalo autônomo: 30 minutos</text>
+  </g>
+
+  <!-- 2. Estados de Glifos Meteorológicos Homologados (Material Symbols Extended) -->
+  <g transform="translate(560, 160)">
+    <text x="0" y="0" font-family="Roboto, sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">Glifos Homologados (Custo Zero / Sem Shaders Dinâmicos)</text>
+
+    <!-- State A: Ensolarado (wb_sunny) -->
+    <g transform="translate(0, 30)">
+      <rect width="180" height="106" rx="14" fill="url(#darkGlass)" stroke="url(#frost)" stroke-width="1.2"/>
+      <circle cx="40" cy="53" r="18" fill="#FFB300"/>
+      <text x="75" y="48" font-family="Roboto, sans-serif" font-weight="500" font-size="15" fill="#FFFFFF">Céu Limpo</text>
+      <text x="75" y="68" font-family="Roboto, sans-serif" font-size="12" fill="#B0BEC5">Ensolarado</text>
+    </g>
+
+    <!-- State B: Chuva / Drizzle (rainy / water_drop) -->
+    <g transform="translate(200, 30)">
+      <rect width="180" height="106" rx="14" fill="url(#darkGlass)" stroke="url(#frost)" stroke-width="1.2"/>
+      <g transform="translate(20, 20)">
+        <path d="M 12,32 C 6,32 2,28 2,22 C 2,17 6,14 10,14 C 12,8 18,5 24,8 C 29,5 36,8 36,14 C 40,14 44,17 44,22 C 44,28 40,32 35,32 Z" fill="#90A4AE"/>
+        <line x1="12" y1="36" x2="8" y2="46" stroke="#4FC3F7" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="22" y1="36" x2="18" y2="46" stroke="#4FC3F7" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="32" y1="36" x2="28" y2="46" stroke="#4FC3F7" stroke-width="2.5" stroke-linecap="round"/>
+      </g>
+      <text x="75" y="48" font-family="Roboto, sans-serif" font-weight="500" font-size="15" fill="#FFFFFF">Chuva</text>
+      <text x="75" y="68" font-family="Roboto, sans-serif" font-size="12" fill="#B0BEC5">Chuvisco</text>
+    </g>
+
+    <!-- State C: Offline / Fallback Neutro (cloud outline) -->
+    <g transform="translate(400, 30)">
+      <rect width="180" height="106" rx="14" fill="url(#darkGlass)" stroke="url(#frost)" stroke-width="1.2"/>
+      <g transform="translate(20, 26)">
+        <path d="M 14,34 C 8,34 4,29 4,24 C 4,19 8,16 12,16 C 14,10 20,7 26,10 C 31,7 38,10 38,16 C 42,16 46,19 46,24 C 46,29 42,34 37,34 Z" fill="none" stroke="#78909C" stroke-width="2.2"/>
+      </g>
+      <text x="75" y="48" font-family="Roboto, sans-serif" font-weight="500" font-size="15" fill="#FFFFFF">Offline</text>
+      <text x="75" y="68" font-family="Roboto, sans-serif" font-size="12" fill="#B0BEC5">Neutro / Cache</text>
+    </g>
+  </g>
+
+  <!-- Technical Specs Box (Bottom) -->
+  <g transform="translate(64, 380)">
+    <rect width="1152" height="260" rx="16" fill="#0E172A" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="32" y="40" font-family="Roboto, sans-serif" font-weight="700" font-size="18" fill="#00E5FF">Parâmetros Técnicos de Execução (API 19 KitKat):</text>
+    <text x="32" y="75" font-family="Roboto, sans-serif" font-size="14" fill="#E2E8F0">• Conectividade: HTTPS obrigatório via TLS 1.2 (suportado por Conscrypt armeabi-v7a). Sem fallback para HTTP plano.</text>
+    <text x="32" y="105" font-family="Roboto, sans-serif" font-size="14" fill="#E2E8F0">• Timeouts: 5 segundos de conexão / leitura com resposta limitada a 128 KiB para proteção de heap Dalvik.</text>
+    <text x="32" y="135" font-family="Roboto, sans-serif" font-size="14" fill="#E2E8F0">• Renderização: Altura reduzida de 116dp para 104dp (otimização EB256) com padding vertical de 8dp.</text>
+    <text x="32" y="165" font-family="Roboto, sans-serif" font-size="14" fill="#E2E8F0">• Superfície Dark Glass: Fundo escurecido #CC0B1220 impede que papéis de parede claros prejudiquem a legibilidade dos textos.</text>
+    <text x="32" y="195" font-family="Roboto, sans-serif" font-size="14" fill="#E2E8F0">• Isolamento de Thread: Requisições de rede executadas estritamente em AsyncTask desacoplado da UI Thread.</text>
+    <text x="32" y="225" font-family="Roboto, sans-serif" font-size="14" fill="#80DEEA">Validação em Hardware: Cache e refresh autônomo validados na TV física smart_tv001 às 02:20.</text>
+  </g>
+</svg>

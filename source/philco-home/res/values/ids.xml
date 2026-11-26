@@ -1,0 +1,14 @@
+<resources>
+    <item name="tile_smarttube" type="id" />
+    <item name="tile_ar" type="id" />
+    <item name="tile_cable" type="id" />
+    <item name="tile_av" type="id" />
+    <item name="tile_hdmi1" type="id" />
+    <item name="tile_hdmi2" type="id" />
+    <item name="tile_apps" type="id" />
+    <item name="tile_settings" type="id" />
+    <item name="weather_box" type="id" />
+    <item name="shortcut_scenes" type="id" />
+    <item name="shortcut_settings" type="id" />
+    <item name="shortcut_standby" type="id" />
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PhilcoOS Ultra 777</string>
+    <string name="brand_display">PHILCO</string>
+    <string name="home_smarttube">SmartTube</string>
+    <string name="home_inputs">Inputs</string>
+    <string name="home_live_tv">TV aberta</string>
+    <string name="home_settings">Settings</string>
+    <string name="weather_attribution">Clima: Open-Meteo · CC BY 4.0</string>
+</resources>

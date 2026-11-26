@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060B14"/>
+      <stop offset="100%" stop-color="#0B1324"/>
+    </linearGradient>
+
+    <!-- Glass Surface Gradient (Normal) -->
+    <linearGradient id="cardNormal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.04"/>
+    </linearGradient>
+
+    <!-- Glass Surface Gradient (Focused) -->
+    <linearGradient id="cardFocused" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.14"/>
+    </linearGradient>
+
+    <!-- Frosted Rim Normal -->
+    <linearGradient id="rimNormal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Title & Spatial Constraints Header -->
+  <g transform="translate(64, 48)">
+    <text x="0" y="28" font-family="Roboto, sans-serif" font-weight="700" font-size="28" fill="#FFFFFF">Dock de Navegação Principal — Glass &amp; Aurora 2.0</text>
+    <text x="0" y="56" font-family="Roboto, sans-serif" font-size="15" fill="#80DEEA">Grid de 8 Cards Horizontais • Largura do Tile: 124dp • Altura: 134dp • Margens Seguras: 64dp</text>
+  </g>
+
+  <!-- The 8 Cards Row Display (Exact Scale & Coordinates) -->
+  <g transform="translate(74, 150)">
+    <!-- Card 1: TV Aberta (AR 27) -->
+    <g transform="translate(0, 10)">
+      <rect width="124" height="134" rx="18" fill="url(#cardNormal)" stroke="url(#rimNormal)" stroke-width="1.5"/>
+      <rect x="42" y="36" width="40" height="28" rx="4" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+      <path d="M 52,24 L 62,36 L 72,24 M 50,64 L 74,64" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+      <text x="62" y="98" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#E0E0E0" text-anchor="middle">TV Aberta</text>
+      <text x="62" y="116" font-family="Roboto, sans-serif" font-size="11" fill="#78909C" text-anchor="middle">Source 27</text>
+    </g>
+
+    <!-- Card 2: Cabo (1) -->
+    <g transform="translate(144, 10)">
+      <rect width="124" height="134" rx="18" fill="url(#cardNormal)" stroke="url(#rimNormal)" stroke-width="1.5"/>
+      <path d="M 44,48 L 80,48 M 50,40 L 50,56 M 74,40 L 74,56" stroke="#4FC3F7" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="62" y="98" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#E0E0E0" text-anchor="middle">Cabo</text>
+      <text x="62" y="116" font-family="Roboto, sans-serif" font-size="11" fill="#78909C" text-anchor="middle">Source 1</text>
+    </g>
+
+    <!-- Card 3: AV Composto (5) -->
+    <g transform="translate(288, 10)">
+      <rect width="124" height="134" rx="18" fill="url(#cardNormal)" stroke="url(#rimNormal)" stroke-width="1.5"/>
+      <circle cx="48" cy="46" r="8" fill="#FDD835" stroke="#FFFFFF" stroke-width="1.5"/>
+      <circle cx="62" cy="46" r="8" fill="#ECEFF1" stroke="#FFFFFF" stroke-width="1.5"/>
+      <circle cx="76" cy="46" r="8" fill="#E53935" stroke="#FFFFFF" stroke-width="1.5"/>
+      <text x="62" y="98" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#E0E0E0" text-anchor="middle">AV</text>
+      <text x="62" y="116" font-family="Roboto, sans-serif" font-size="11" fill="#78909C" text-anchor="middle">Source 5</text>
+    </g>
+
+    <!-- Card 4: HDMI 1 (18) -->
+    <g transform="translate(432, 10)">
+      <rect width="124" height="134" rx="18" fill="url(#cardNormal)" stroke="url(#rimNormal)" stroke-width="1.5"/>
+      <rect x="42" y="38" width="40" height="24" rx="3" fill="none" stroke="#81C784" stroke-width="2.2"/>
+      <path d="M 46,44 L 46,56 M 54,44 L 54,56 M 62,44 L 62,56 M 70,44 L 70,56 M 78,44 L 78,56" stroke="#81C784" stroke-width="1.5"/>
+      <text x="62" y="98" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#E0E0E0" text-anchor="middle">HDMI 1</text>
+      <text x="62" y="116" font-family="Roboto, sans-serif" font-size="11" fill="#78909C" text-anchor="middle">Source 18</text>
+    </g>
+
+    <!-- Card 5: HDMI 2 (17 - FOCADO) -->
+    <g transform="translate(574, 4)">
+      <rect x="-3" y="-3" width="134" height="144" rx="22" fill="#00E5FF" fill-opacity="0.25"/>
+      <rect width="128" height="138" rx="20" fill="url(#cardFocused)" stroke="#00E5FF" stroke-width="2.5"/>
+      <rect x="44" y="38" width="40" height="24" rx="3" fill="none" stroke="#00E5FF" stroke-width="2.4"/>
+      <path d="M 48,44 L 48,56 M 56,44 L 56,56 M 64,44 L 64,56 M 72,44 L 72,56 M 80,44 L 80,56" stroke="#00E5FF" stroke-width="1.6"/>
+      <text x="64" y="100" font-family="Roboto, sans-serif" font-weight="700" font-size="15" fill="#FFFFFF" text-anchor="middle">HDMI 2</text>
+      <text x="64" y="120" font-family="Roboto, sans-serif" font-weight="500" font-size="12" fill="#80DEEA" text-anchor="middle">Source 17</text>
+    </g>
+
+    <!-- Card 6: SmartTube -->
+    <g transform="translate(720, 10)">
+      <rect width="124" height="134" rx="18" fill="url(#cardNormal)" stroke="url(#rimNormal)" stroke-width="1.5"/>
+      <rect x="38" y="36" width="48" height="30" rx="7" fill="#E53935"/>
+      <polygon points="58,44 68,51 58,58" fill="#FFFFFF"/>
+      <text x="62" y="98" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#E0E0E0" text-anchor="middle">SmartTube</text>
+      <text x="62" y="116" font-family="Roboto, sans-serif" font-size="11" fill="#78909C" text-anchor="middle">YouTube TV</text>
+    </g>
+
+    <!-- Card 7: Apps -->
+    <g transform="translate(864, 10)">
+      <rect width="124" height="134" rx="18" fill="url(#cardNormal)" stroke="url(#rimNormal)" stroke-width="1.5"/>
+      <g transform="translate(48, 36)" fill="#BA68C8">
+        <rect x="0" y="0" width="7" height="7" rx="1.5"/>
+        <rect x="11" y="0" width="7" height="7" rx="1.5"/>
+        <rect x="22" y="0" width="7" height="7" rx="1.5"/>
+        <rect x="0" y="11" width="7" height="7" rx="1.5"/>
+        <rect x="11" y="11" width="7" height="7" rx="1.5"/>
+        <rect x="22" y="11" width="7" height="7" rx="1.5"/>
+        <rect x="0" y="22" width="7" height="7" rx="1.5"/>
+        <rect x="11" y="22" width="7" height="7" rx="1.5"/>
+        <rect x="22" y="22" width="7" height="7" rx="1.5"/>
+      </g>
+      <text x="62" y="98" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#E0E0E0" text-anchor="middle">Apps</text>
+      <text x="62" y="116" font-family="Roboto, sans-serif" font-size="11" fill="#78909C" text-anchor="middle">Biblioteca</text>
+    </g>
+
+    <!-- Card 8: Configurações -->
+    <g transform="translate(1008, 10)">
+      <rect width="124" height="134" rx="18" fill="url(#cardNormal)" stroke="url(#rimNormal)" stroke-width="1.5"/>
+      <circle cx="62" cy="50" r="8" fill="none" stroke="#FFB74D" stroke-width="2.5"/>
+      <path d="M 62,34 L 62,38 M 62,62 L 62,66 M 46,50 L 50,50 M 74,50 L 78,50 M 51,39 L 54,42 M 70,58 L 73,61 M 51,61 L 54,58 M 70,42 L 73,39" stroke="#FFB74D" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="62" y="98" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#E0E0E0" text-anchor="middle">Ajustes</text>
+      <text x="62" y="116" font-family="Roboto, sans-serif" font-size="11" fill="#78909C" text-anchor="middle">Sistema</text>
+    </g>
+  </g>
+
+  <!-- Technical Table: Focus and Directional Binding -->
+  <g transform="translate(64, 340)">
+    <rect width="1152" height="330" rx="16" fill="#0E172A" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="32" y="38" font-family="Roboto, sans-serif" font-weight="700" font-size="18" fill="#00E5FF">Matriz de Navegação D-pad Estrita (Anti-Trap Guarantees):</text>
+    
+    <text x="32" y="75" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#94A3B8">Card #</text>
+    <text x="120" y="75" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#94A3B8">Identificador</text>
+    <text x="280" y="75" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#94A3B8">Realtek Source ID</text>
+    <text x="460" y="75" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#94A3B8">nextFocusLeft</text>
+    <text x="640" y="75" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#94A3B8">nextFocusRight</text>
+    <text x="820" y="75" font-family="Roboto, sans-serif" font-weight="500" font-size="14" fill="#94A3B8">Ação ao Pressionar ENTER</text>
+
+    <line x1="32" y1="88" x2="1120" y2="88" stroke="#334155" stroke-width="1"/>
+
+    <text x="32" y="115" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">Tile 1</text>
+    <text x="120" y="115" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">TV Aberta</text>
+    <text x="280" y="115" font-family="Roboto, sans-serif" font-size="13" fill="#38BDF8">AR = 27</text>
+    <text x="460" y="115" font-family="Roboto, sans-serif" font-size="13" fill="#94A3B8">tile_tv (Stop)</text>
+    <text x="640" y="115" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_cable</text>
+    <text x="820" y="115" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">TvManager.setSource(27) + com.tsb.tv</text>
+
+    <text x="32" y="145" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">Tile 2</text>
+    <text x="120" y="145" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">Cabo</text>
+    <text x="280" y="145" font-family="Roboto, sans-serif" font-size="13" fill="#38BDF8">Cable = 1</text>
+    <text x="460" y="145" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_tv</text>
+    <text x="640" y="145" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_av</text>
+    <text x="820" y="145" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">TvManager.setSource(1) + com.tsb.tv</text>
+
+    <text x="32" y="175" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">Tile 3</text>
+    <text x="120" y="175" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">AV Composto</text>
+    <text x="280" y="175" font-family="Roboto, sans-serif" font-size="13" fill="#38BDF8">AV = 5</text>
+    <text x="460" y="175" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_cable</text>
+    <text x="640" y="175" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_hdmi1</text>
+    <text x="820" y="175" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">TvManager.setSource(5)</text>
+
+    <text x="32" y="205" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">Tile 4</text>
+    <text x="120" y="205" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">HDMI 1</text>
+    <text x="280" y="205" font-family="Roboto, sans-serif" font-size="13" fill="#38BDF8">HDMI1 = 18</text>
+    <text x="460" y="205" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_av</text>
+    <text x="640" y="205" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_hdmi2</text>
+    <text x="820" y="205" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">TvManager.setSource(18)</text>
+
+    <text x="32" y="235" font-family="Roboto, sans-serif" font-size="13" fill="#00E5FF">Tile 5</text>
+    <text x="120" y="235" font-family="Roboto, sans-serif" font-size="13" fill="#00E5FF">HDMI 2 (Ativo)</text>
+    <text x="280" y="235" font-family="Roboto, sans-serif" font-size="13" fill="#00E5FF">HDMI2 = 17</text>
+    <text x="460" y="235" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_hdmi1</text>
+    <text x="640" y="235" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_smarttube</text>
+    <text x="820" y="235" font-family="Roboto, sans-serif" font-size="13" fill="#00E5FF">TvManager.setSource(17)</text>
+
+    <text x="32" y="265" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">Tile 6</text>
+    <text x="120" y="265" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">SmartTube</text>
+    <text x="280" y="265" font-family="Roboto, sans-serif" font-size="13" fill="#94A3B8">—</text>
+    <text x="460" y="265" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_hdmi2</text>
+    <text x="640" y="265" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_apps</text>
+    <text x="820" y="265" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">Launch: org.smarttube.stable</text>
+
+    <text x="32" y="295" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">Tile 7/8</text>
+    <text x="120" y="295" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">Apps / Ajustes</text>
+    <text x="280" y="295" font-family="Roboto, sans-serif" font-size="13" fill="#94A3B8">—</text>
+    <text x="460" y="295" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">tile_smarttube</text>
+    <text x="640" y="295" font-family="Roboto, sans-serif" font-size="13" fill="#94A3B8">tile_settings (Stop)</text>
+    <text x="820" y="295" font-family="Roboto, sans-serif" font-size="13" fill="#E2E8F0">App Drawer / com.android.settings</text>
+  </g>
+</svg>

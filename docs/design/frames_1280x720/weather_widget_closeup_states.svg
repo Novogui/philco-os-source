@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <!-- Background Canvas Gradient -->
+    <linearGradient id="mainBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070C15"/>
+      <stop offset="60%" stop-color="#0B1322"/>
+      <stop offset="100%" stop-color="#05080E"/>
+    </linearGradient>
+
+    <!-- Normal Dark Glass Material (Charcoal/Navy 80% opacity) -->
+    <linearGradient id="cardNormalGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#142134" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#0A111C" stop-opacity="0.86"/>
+    </linearGradient>
+
+    <!-- Focused Glass Material (Deep Navy Glow 90% opacity) -->
+    <linearGradient id="cardFocusedGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#182A45" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#0E192B" stop-opacity="0.92"/>
+    </linearGradient>
+
+    <!-- Frosted Specular Border -->
+    <linearGradient id="frostedBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+    </linearGradient>
+
+    <!-- Vertical Divider Line Gradient -->
+    <linearGradient id="dividerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.04"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.04"/>
+    </linearGradient>
+
+    <!-- Focus Glow Filter (Hardware-safe simulation) -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00E5FF" flood-opacity="0.45"/>
+    </filter>
+
+    <!-- Text Shadow for High Contrast Readability -->
+    <filter id="textDropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- 1. Background -->
+  <rect width="1280" height="720" fill="url(#mainBg)"/>
+
+  <!-- 2. Header Title & Architecture Metadata -->
+  <g transform="translate(64, 48)">
+    <text x="0" y="24" font-family="Roboto, sans-serif" font-weight="700" font-size="24" fill="#FFFFFF" letter-spacing="0.3">PHILCOOS ULTRA 777 — REDESIGN DO WIDGET DE CLIMA</text>
+    <text x="0" y="48" font-family="Roboto, sans-serif" font-size="14" fill="#00E5FF" letter-spacing="0.5">ARQUITETURA DE CARTÃO DIVIDIDO (SPLIT-CARD) • GLASS &amp; AURORA 2.0</text>
+    <text x="0" y="68" font-family="Roboto, sans-serif" font-size="12" fill="#78909C">Pegada estrita: 312 × 88 dp • Alinhado à borda direita em 1216 px • KitKat API 19 • Open-Meteo HTTPS</text>
+  </g>
+
+  <!-- 3. Close-Up: Estado Normal (312 × 88 dp com Cotas e Medidas) -->
+  <g transform="translate(64, 145)">
+    <!-- Section Label -->
+    <text x="0" y="-12" font-family="Roboto, sans-serif" font-weight="700" font-size="14" fill="#80DEEA">1. ESTADO NORMAL (REPOUSO / 1.0x)</text>
+
+    <!-- The 312x88 Weather Card -->
+    <g transform="translate(0, 0)">
+      <!-- Base Glass Surface -->
+      <rect width="312" height="88" rx="16" fill="url(#cardNormalGlass)" stroke="url(#frostedBorder)" stroke-width="1.2"/>
+
+      <!-- Inner Specular Refraction Rim (Top edge 0.8dp) -->
+      <path d="M 16,1 L 296,1" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="0.8" stroke-linecap="round"/>
+
+      <!-- === LEFT COMPARTMENT (Condição & Ícone: X: 0..142) === -->
+      <!-- Condition Text (Top-Left: Roboto Medium 12sp) -->
+      <text x="14" y="24" font-family="Roboto, sans-serif" font-weight="500" font-size="12" fill="#E2E8F0" letter-spacing="0.2">Parcialmente nublado</text>
+
+      <!-- Weather Glyph (Bottom-Left: Partly Cloudy 42x42dp) -->
+      <g transform="translate(48, 34)">
+        <!-- Sun (peeking behind cloud) -->
+        <circle cx="28" cy="14" r="10" fill="#FFA000"/>
+        <!-- Sun subtle core -->
+        <circle cx="28" cy="14" r="6" fill="#FFD54F"/>
+        <!-- Front Cloud -->
+        <path d="M 10,38 C 5,38 1,34 1,29 C 1,24.5 4.5,20.5 9,20.2 C 10.5,14.5 16,10 22.5,10 C 27.5,10 32,13 33.5,17.5 C 34.5,17.2 35.5,17 36.5,17 C 41,17 44.5,20.5 44.5,25 C 44.5,26 44.3,27 44,28 C 47,29.5 49,32.5 49,36 C 49,40 45.5,43 41.5,43 L 10,43 Z" fill="#CFD8DC" fill-opacity="0.35"/>
+        <path d="M 8,36 C 4,36 1,32.5 1,28 C 1,24 4,20.5 8,20.2 C 9.5,15 14.5,11 20.5,11 C 25,11 29,13.5 30.5,17.5 C 31.5,17.2 32.5,17 33.5,17 C 37.5,17 40.5,20 40.5,24 C 40.5,25 40.3,25.8 40,26.5 C 42.5,28 44,30.5 44,33.5 C 44,37 41,40 37.5,40 L 8,40 Z" fill="#ECEFF1"/>
+      </g>
+
+      <!-- === DISCRETE VERTICAL DIVIDER (X: 142) === -->
+      <line x1="142" y1="12" x2="142" y2="76" stroke="url(#dividerGrad)" stroke-width="1"/>
+
+      <!-- === RIGHT COMPARTMENT (Cidade, Temp, Atribuição: X: 154..312) === -->
+      <!-- City Name (Top-Right: Roboto Medium 12sp) -->
+      <text x="154" y="24" font-family="Roboto, sans-serif" font-weight="500" font-size="12" fill="#90A4AE" letter-spacing="0.3">Joinville, SC</text>
+
+      <!-- Current Temperature (Center-Right: 34sp displayTypeface) -->
+      <text x="154" y="58" font-family="Roboto, sans-serif" font-weight="400" font-size="34" fill="#FFFFFF" letter-spacing="-0.5" filter="url(#textDropShadow)">21°C</text>
+
+      <!-- Open-Meteo Legal Attribution (Bottom-Right: 8sp Roboto Regular) -->
+      <text x="154" y="76" font-family="Roboto, sans-serif" font-weight="400" font-size="8" fill="#64748B" letter-spacing="0.2">Clima: Open-Meteo · CC BY 4.0</text>
+    </g>
+
+    <!-- Measurement Annotations (Cotas) -->
+    <!-- Card Width: 312dp -->
+    <line x1="0" y1="98" x2="312" y2="98" stroke="#00E5FF" stroke-width="1"/>
+    <line x1="0" y1="94" x2="0" y2="102" stroke="#00E5FF" stroke-width="1"/>
+    <line x1="312" y1="94" x2="312" y2="102" stroke="#00E5FF" stroke-width="1"/>
+    <text x="156" y="112" font-family="Roboto, sans-serif" font-size="11" fill="#00E5FF" text-anchor="middle">312 dp (Largura Exata)</text>
+
+    <!-- Card Height: 88dp -->
+    <line x1="324" y1="0" x2="324" y2="88" stroke="#00E5FF" stroke-width="1"/>
+    <line x1="320" y1="0" x2="328" y2="0" stroke="#00E5FF" stroke-width="1"/>
+    <line x1="320" y1="88" x2="328" y2="88" stroke="#00E5FF" stroke-width="1"/>
+    <text x="334" y="48" font-family="Roboto, sans-serif" font-size="11" fill="#00E5FF">88 dp</text>
+
+    <!-- Divider Position: 142dp -->
+    <line x1="0" y1="-8" x2="142" y2="-8" stroke="#78909C" stroke-width="1" stroke-dasharray="2,2"/>
+    <text x="71" y="-12" font-family="Roboto, sans-serif" font-size="10" fill="#78909C" text-anchor="middle">142 dp (Esq)</text>
+    <line x1="142" y1="-8" x2="312" y2="-8" stroke="#78909C" stroke-width="1" stroke-dasharray="2,2"/>
+    <text x="227" y="-12" font-family="Roboto, sans-serif" font-size="10" fill="#78909C" text-anchor="middle">170 dp (Dir)</text>
+  </g>
+
+  <!-- 4. Close-Up: Estado Focado D-Pad (312 × 88 dp com Anel Ciano) -->
+  <g transform="translate(480, 145)">
+    <!-- Section Label -->
+    <text x="0" y="-12" font-family="Roboto, sans-serif" font-weight="700" font-size="14" fill="#00E5FF">2. ESTADO FOCADO D-PAD (SELEÇÃO ATIVA)</text>
+
+    <!-- The 312x88 Focused Weather Card -->
+    <g transform="translate(0, 0)">
+      <!-- Glow & Cyan Focus Border (2.5dp) -->
+      <rect width="312" height="88" rx="16" fill="url(#cardFocusedGlass)" stroke="#00E5FF" stroke-width="2.5" filter="url(#cyanGlow)"/>
+
+      <!-- Specular Refraction Highlight -->
+      <path d="M 16,2 L 296,2" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1" stroke-linecap="round"/>
+
+      <!-- === LEFT COMPARTMENT === -->
+      <text x="14" y="24" font-family="Roboto, sans-serif" font-weight="500" font-size="12" fill="#FFFFFF" letter-spacing="0.2">Parcialmente nublado</text>
+
+      <g transform="translate(48, 34)">
+        <circle cx="28" cy="14" r="10" fill="#FFA000"/>
+        <circle cx="28" cy="14" r="6" fill="#FFD54F"/>
+        <path d="M 8,36 C 4,36 1,32.5 1,28 C 1,24 4,20.5 8,20.2 C 9.5,15 14.5,11 20.5,11 C 25,11 29,13.5 30.5,17.5 C 31.5,17.2 32.5,17 33.5,17 C 37.5,17 40.5,20 40.5,24 C 40.5,25 40.3,25.8 40,26.5 C 42.5,28 44,30.5 44,33.5 C 44,37 41,40 37.5,40 L 8,40 Z" fill="#FFFFFF"/>
+      </g>
+
+      <!-- === DISCRETE VERTICAL DIVIDER === -->
+      <line x1="142" y1="12" x2="142" y2="76" stroke="url(#dividerGrad)" stroke-width="1"/>
+
+      <!-- === RIGHT COMPARTMENT === -->
+      <text x="154" y="24" font-family="Roboto, sans-serif" font-weight="500" font-size="12" fill="#80DEEA" letter-spacing="0.3">Joinville, SC</text>
+      <text x="154" y="58" font-family="Roboto, sans-serif" font-weight="400" font-size="34" fill="#FFFFFF" letter-spacing="-0.5" filter="url(#textDropShadow)">21°C</text>
+      <text x="154" y="76" font-family="Roboto, sans-serif" font-weight="400" font-size="8" fill="#80DEEA" letter-spacing="0.2">Clima: Open-Meteo · CC BY 4.0</text>
+    </g>
+
+    <!-- Feedback Specs -->
+    <text x="0" y="112" font-family="Roboto, sans-serif" font-size="11" fill="#00E5FF">• Anel de Foco: 2.5dp Ciano Elétrico (#00E5FF)</text>
+    <text x="0" y="128" font-family="Roboto, sans-serif" font-size="11" fill="#B0BEC5">• Halo Externo: drop-shadow 4dp ciano 45% opacidade</text>
+    <text x="0" y="144" font-family="Roboto, sans-serif" font-size="11" fill="#B0BEC5">• Interação IR: [OK] Força refresh HTTPS | [Long OK] Altera cidade</text>
+  </g>
+
+  <!-- 5. Tabela de Estados por Condição Meteorológica (WMO Matrix) -->
+  <g transform="translate(64, 340)">
+    <text x="0" y="-12" font-family="Roboto, sans-serif" font-weight="700" font-size="14" fill="#FFFFFF">3. MATRIZ DE ESTADOS POR CÓDIGO WMO (OPEN-METEO)</text>
+
+    <!-- Variant A: Céu Limpo (Ensolarado / WMO 0) -->
+    <g transform="translate(0, 0)">
+      <rect width="270" height="74" rx="14" fill="url(#cardNormalGlass)" stroke="url(#frostedBorder)" stroke-width="1"/>
+      <text x="12" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#E2E8F0">Céu limpo</text>
+      <!-- Sun Glyph -->
+      <g transform="translate(38, 28)">
+        <circle cx="18" cy="18" r="9" fill="#FFA000"/>
+        <circle cx="18" cy="18" r="5" fill="#FFD54F"/>
+        <!-- Rays -->
+        <line x1="18" y1="3" x2="18" y2="6" stroke="#FFA000" stroke-width="2" stroke-linecap="round"/>
+        <line x1="18" y1="30" x2="18" y2="33" stroke="#FFA000" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="18" x2="6" y2="18" stroke="#FFA000" stroke-width="2" stroke-linecap="round"/>
+        <line x1="30" y1="18" x2="33" y2="18" stroke="#FFA000" stroke-width="2" stroke-linecap="round"/>
+        <line x1="7.4" y1="7.4" x2="9.5" y2="9.5" stroke="#FFA000" stroke-width="2" stroke-linecap="round"/>
+        <line x1="26.5" y1="26.5" x2="28.6" y2="28.6" stroke="#FFA000" stroke-width="2" stroke-linecap="round"/>
+        <line x1="7.4" y1="28.6" x2="9.5" y2="26.5" stroke="#FFA000" stroke-width="2" stroke-linecap="round"/>
+        <line x1="26.5" y1="9.5" x2="28.6" y2="7.4" stroke="#FFA000" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      <line x1="116" y1="10" x2="116" y2="64" stroke="url(#dividerGrad)" stroke-width="1"/>
+      <text x="126" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#90A4AE">Joinville, SC</text>
+      <text x="126" y="48" font-family="Roboto, sans-serif" font-weight="400" font-size="28" fill="#FFFFFF">28°C</text>
+      <text x="126" y="64" font-family="Roboto, sans-serif" font-size="7.5" fill="#64748B">Open-Meteo · WMO 0</text>
+    </g>
+
+    <!-- Variant B: Nublado (WMO 3) -->
+    <g transform="translate(290, 0)">
+      <rect width="270" height="74" rx="14" fill="url(#cardNormalGlass)" stroke="url(#frostedBorder)" stroke-width="1"/>
+      <text x="12" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#E2E8F0">Nublado</text>
+      <!-- Dual Cloud Glyph -->
+      <g transform="translate(36, 26)">
+        <path d="M 22,24 C 20,24 18,22 18,20 C 18,17 20,15 23,15 C 24,12 27,10 30,10 C 33,10 35,11.5 36,13 C 37,13 38,13 39,13 C 41,13 43,15 43,17 C 44,18 45,19 45,21 C 45,23 43,24 41,24 Z" fill="#90A4AE" fill-opacity="0.6"/>
+        <path d="M 6,32 C 3,32 1,29.5 1,26 C 1,22.5 3.5,20 6.5,19.5 C 7.5,15 12,12 17,12 C 21,12 24.5,14 26,17.5 C 27,17.2 28,17 29,17 C 32.5,17 35,19.5 35,23 C 35,23.8 34.8,24.5 34.5,25 C 36.5,26.5 38,28.5 38,31 C 38,34 35.5,36 32,36 L 6,36 Z" fill="#ECEFF1"/>
+      </g>
+      <line x1="116" y1="10" x2="116" y2="64" stroke="url(#dividerGrad)" stroke-width="1"/>
+      <text x="126" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#90A4AE">Joinville, SC</text>
+      <text x="126" y="48" font-family="Roboto, sans-serif" font-weight="400" font-size="28" fill="#FFFFFF">24°C</text>
+      <text x="126" y="64" font-family="Roboto, sans-serif" font-size="7.5" fill="#64748B">Open-Meteo · WMO 3</text>
+    </g>
+
+    <!-- Variant C: Chuva / Garoa (WMO 51..67, 80..82) -->
+    <g transform="translate(580, 0)">
+      <rect width="270" height="74" rx="14" fill="url(#cardNormalGlass)" stroke="url(#frostedBorder)" stroke-width="1"/>
+      <text x="12" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#E2E8F0">Chuva</text>
+      <!-- Rain Glyph -->
+      <g transform="translate(36, 24)">
+        <path d="M 6,26 C 3,26 1,23.5 1,20 C 1,16.5 3.5,14 6.5,13.5 C 7.5,9 12,6 17,6 C 21,6 24.5,8 26,11.5 C 27,11.2 28,11 29,11 C 32.5,11 35,13.5 35,17 C 35,17.8 34.8,18.5 34.5,19 C 36.5,20.5 38,22.5 38,25 C 38,28 35.5,30 32,30 L 6,30 Z" fill="#B0BEC5"/>
+        <!-- Rain Drops in Discrete Cyan -->
+        <line x1="10" y1="33" x2="7" y2="41" stroke="#4FC3F7" stroke-width="2" stroke-linecap="round"/>
+        <line x1="18" y1="33" x2="15" y2="41" stroke="#4FC3F7" stroke-width="2" stroke-linecap="round"/>
+        <line x1="26" y1="33" x2="23" y2="41" stroke="#4FC3F7" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      <line x1="116" y1="10" x2="116" y2="64" stroke="url(#dividerGrad)" stroke-width="1"/>
+      <text x="126" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#90A4AE">Joinville, SC</text>
+      <text x="126" y="48" font-family="Roboto, sans-serif" font-weight="400" font-size="28" fill="#FFFFFF">18°C</text>
+      <text x="126" y="64" font-family="Roboto, sans-serif" font-size="7.5" fill="#64748B">Open-Meteo · WMO 61</text>
+    </g>
+
+    <!-- Variant D: Trovoadas (WMO 95..99) -->
+    <g transform="translate(870, 0)">
+      <rect width="270" height="74" rx="14" fill="url(#cardNormalGlass)" stroke="url(#frostedBorder)" stroke-width="1"/>
+      <text x="12" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#E2E8F0">Trovoadas</text>
+      <!-- Thunderstorm Glyph -->
+      <g transform="translate(36, 24)">
+        <path d="M 6,24 C 3,24 1,21.5 1,18 C 1,14.5 3.5,12 6.5,11.5 C 7.5,7 12,4 17,4 C 21,4 24.5,6 26,9.5 C 27,9.2 28,9 29,9 C 32.5,9 35,11.5 35,15 C 35,15.8 34.8,16.5 34.5,17 C 36.5,18.5 38,20.5 38,23 C 38,26 35.5,28 32,28 L 6,28 Z" fill="#78909C"/>
+        <!-- Lightning bolt -->
+        <polygon points="19,25 14,33 18,33 15,41 23,31 19,31" fill="#FFD54F" stroke="#FFA000" stroke-width="0.5"/>
+      </g>
+      <line x1="116" y1="10" x2="116" y2="64" stroke="url(#dividerGrad)" stroke-width="1"/>
+      <text x="126" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#90A4AE">Joinville, SC</text>
+      <text x="126" y="48" font-family="Roboto, sans-serif" font-weight="400" font-size="28" fill="#FFFFFF">22°C</text>
+      <text x="126" y="64" font-family="Roboto, sans-serif" font-size="7.5" fill="#64748B">Open-Meteo · WMO 95</text>
+    </g>
+
+    <!-- Variant E: Offline / Cache Fallback (Neutro) -->
+    <g transform="translate(0, 90)">
+      <rect width="270" height="74" rx="14" fill="url(#cardNormalGlass)" stroke="url(#frostedBorder)" stroke-width="1"/>
+      <text x="12" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#CFD8DC">Offline / Cache</text>
+      <!-- Neutral Cloud Outline Glyph -->
+      <g transform="translate(36, 26)">
+        <path d="M 6,30 C 3,30 1,27.5 1,24 C 1,20.5 3.5,18 6.5,17.5 C 7.5,13 12,10 17,10 C 21,10 24.5,12 26,15.5 C 27,15.2 28,15 29,15 C 32.5,15 35,17.5 35,21 C 35,21.8 34.8,22.5 34.5,23 C 36.5,24.5 38,26.5 38,29 C 38,32 35.5,34 32,34 L 6,34 Z" fill="none" stroke="#78909C" stroke-width="2"/>
+      </g>
+      <line x1="116" y1="10" x2="116" y2="64" stroke="url(#dividerGrad)" stroke-width="1"/>
+      <text x="126" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#78909C">Joinville, SC</text>
+      <text x="126" y="48" font-family="Roboto, sans-serif" font-weight="400" font-size="28" fill="#CFD8DC">--°C</text>
+      <text x="126" y="64" font-family="Roboto, sans-serif" font-size="7.5" fill="#78909C">Toque para atualizar</text>
+    </g>
+
+    <!-- Variant F: Neblina (WMO 45, 48) -->
+    <g transform="translate(290, 90)">
+      <rect width="270" height="74" rx="14" fill="url(#cardNormalGlass)" stroke="url(#frostedBorder)" stroke-width="1"/>
+      <text x="12" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#E2E8F0">Neblina</text>
+      <!-- Fog Glyph -->
+      <g transform="translate(36, 26)">
+        <path d="M 8,20 C 5,20 3,18 3,15 C 3,12 5,10 8,10 C 9,7 12,5 16,5 C 20,5 23,7 24,10 C 27,10 29,12 29,15 C 29,18 27,20 24,20 Z" fill="#90A4AE" fill-opacity="0.7"/>
+        <line x1="4" y1="26" x2="34" y2="26" stroke="#B0BEC5" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="8" y1="32" x2="30" y2="32" stroke="#B0BEC5" stroke-width="2.5" stroke-linecap="round"/>
+      </g>
+      <line x1="116" y1="10" x2="116" y2="64" stroke="url(#dividerGrad)" stroke-width="1"/>
+      <text x="126" y="20" font-family="Roboto, sans-serif" font-weight="500" font-size="11" fill="#90A4AE">Joinville, SC</text>
+      <text x="126" y="48" font-family="Roboto, sans-serif" font-weight="400" font-size="28" fill="#FFFFFF">15°C</text>
+      <text x="126" y="64" font-family="Roboto, sans-serif" font-size="7.5" fill="#64748B">Open-Meteo · WMO 45</text>
+    </g>
+
+    <!-- Engineering Parameters Box (Right Side) -->
+    <g transform="translate(580, 90)">
+      <rect width="560" height="74" rx="14" fill="#0C1524" stroke="#1E2E44" stroke-width="1.2"/>
+      <text x="16" y="20" font-family="Roboto, sans-serif" font-weight="700" font-size="11" fill="#00E5FF">REGRAS DE HARMONIZAÇÃO VISUAL &amp; SISTEMA (KITKAT 4.4):</text>
+      <text x="16" y="36" font-family="Roboto, sans-serif" font-size="10" fill="#CFD8DC">• Superfície Dark Glass (#CC0E1726): Garante legibilidade sobre os 5 wallpapers fotográficos (especialmente pôr do sol dourado).</text>
+      <text x="16" y="49" font-family="Roboto, sans-serif" font-size="10" fill="#CFD8DC">• Divisor Discreto: Traço de 1dp com alpha atenuado (4% a 18%) não polui visualmente nem fragmenta a leitura de 10 pés.</text>
+      <text x="16" y="62" font-family="Roboto, sans-serif" font-size="10" fill="#80DEEA">• Assets Leves: 7 PNGs pré-rasterizados (96×96) somam apenas 12,325 bytes (~12 KB &lt; 30 KB limite). Zero rede para imagens.</text>
+    </g>
+  </g>
+
+  <!-- 6. Footer Legal & Engine Specs -->
+  <g transform="translate(64, 690)">
+    <text x="0" y="0" font-family="Roboto, sans-serif" font-size="11" fill="#546E7A">PhilcoOS Ultra 777 • RTD2984TD-GR • Android 4.4.2 KitKat • Design Baseline Glass &amp; Aurora 2.0 • Proposta para Revisão do Codex</text>
+  </g>
+</svg>

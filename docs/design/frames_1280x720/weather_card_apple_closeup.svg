@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1018"/>
+      <stop offset="100%" stop-color="#070A0F"/>
+    </linearGradient>
+    <linearGradient id="cardReposeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#454B53"/>
+      <stop offset="100%" stop-color="#6C7580"/>
+    </linearGradient>
+    <linearGradient id="cardFocusGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#26303E"/>
+      <stop offset="100%" stop-color="#3E4B5E"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00E5FF" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bgGrad)"/>
+
+  <!-- Header -->
+  <text x="48" y="44" font-family="'Lato', sans-serif" font-weight="700" font-size="22" fill="#FFFFFF">PHILCOOS ULTRA 777 — HIERARQUIA VISUAL APPLE PARA O CLIMA</text>
+  <text x="48" y="68" font-family="'Segoe UI', sans-serif" font-size="13" fill="#00E5FF">Task WEATHER-CARD-UX-02 · Especificação Visual Glass &amp; Aurora · 1280×720 Progressive TV · Sem Alteração de Código</text>
+  <line x1="48" y1="84" x2="1232" y2="84" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+  <!-- Column 1: Atual -->
+  <text x="48" y="112" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="14" fill="#FFAA50">1. ESTADO ATUAL NA TV (QC07-r4.6)</text>
+  <rect x="48" y="128" width="360" height="112" rx="20" fill="#4B515A" stroke="#FF6464" stroke-width="1"/>
+  <!-- Details Col 1 -->
+  <text x="48" y="260" font-family="'Segoe UI', sans-serif" font-size="12" fill="#E68282">• Zona esquerda inchada (188dp / 56% da largura)</text>
+  <text x="48" y="278" font-family="'Segoe UI', sans-serif" font-size="12" fill="#E68282">• 58dp de vácuo ocioso em cada lado do ícone</text>
+  <text x="48" y="296" font-family="'Segoe UI', sans-serif" font-size="12" fill="#E68282">• Coluna direita comprimida em apenas 148dp</text>
+  <text x="48" y="314" font-family="'Segoe UI', sans-serif" font-size="12" fill="#E68282">• Temperatura 37sp ('21°C') tímida e sem destaque</text>
+  <text x="48" y="332" font-family="'Segoe UI', sans-serif" font-size="12" fill="#E68282">• 'Máx/Min' colado na base ('Min' sem acento)</text>
+  <text x="48" y="350" font-family="'Segoe UI', sans-serif" font-size="12" fill="#E68282">• Atribuição Open-Meteo estrangulada na borda</text>
+
+  <!-- Column 2: Proposta Repouso -->
+  <text x="448" y="112" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="14" fill="#64E696">2. PROPOSTA: REPOUSO (NORMAL 1.0x)</text>
+  <g transform="translate(448, 128)">
+    <rect width="360" height="112" rx="20" fill="url(#cardReposeGrad)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+    <!-- Left panel (118dp) -->
+    <text x="71" y="24" text-anchor="middle" font-family="'Lato', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Nublado</text>
+    <circle cx="71" cy="68" r="28" fill="#B0BEC5" opacity="0.8"/>
+    <!-- Right panel (starts at 138) -->
+    <text x="138" y="26" font-family="'Lato', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Joinville</text>
+    <text x="138" y="42" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="700" fill="#B8CADB">AGORA</text>
+    <text x="138" y="80" font-family="'Lato', sans-serif" font-size="46" font-weight="700" fill="#FFFFFF">21°</text>
+    <text x="138" y="99" font-family="'Lato', sans-serif" font-size="12" font-weight="500" fill="#DDE7F2">Máx 28° • Mín 21°</text>
+    <text x="138" y="109" font-family="'Arial', sans-serif" font-size="7" fill="#8295A8">Clima: Open-Meteo · CC BY 4.0</text>
+  </g>
+  <text x="448" y="260" font-family="'Segoe UI', sans-serif" font-size="12" fill="#B4E6BE">• Zona esquerda estreitada e centrada em 118dp</text>
+  <text x="448" y="278" font-family="'Segoe UI', sans-serif" font-size="12" fill="#B4E6BE">• 'Nublado' 15sp branco puro (#FFFFFF) + sombra</text>
+  <text x="448" y="296" font-family="'Segoe UI', sans-serif" font-size="12" fill="#B4E6BE">• Ícone 3D volumétrico 66×66dp bem encaixado</text>
+  <text x="448" y="314" font-family="'Segoe UI', sans-serif" font-size="12" fill="#B4E6BE">• 'Joinville' 17sp Lato Medium claro e legível</text>
+  <text x="448" y="332" font-family="'Segoe UI', sans-serif" font-size="12" fill="#B4E6BE">• 'AGORA' 9sp caixa alta em tom ardósia (#B8CADB)</text>
+  <text x="448" y="350" font-family="'Segoe UI', sans-serif" font-size="12" fill="#B4E6BE">• Temperatura dominante 46sp bold em '21°' (Apple)</text>
+
+  <!-- Column 3: Proposta Focado -->
+  <text x="848" y="112" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="14" fill="#00E5FF">3. PROPOSTA: FOCADO D-PAD (1.0x / ANEL)</text>
+  <g transform="translate(848, 128)">
+    <rect width="360" height="112" rx="20" fill="url(#cardFocusGrad)" stroke="#00E5FF" stroke-width="3" filter="url(#cyanGlow)"/>
+    <text x="71" y="24" text-anchor="middle" font-family="'Lato', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Nublado</text>
+    <circle cx="71" cy="68" r="28" fill="#B0BEC5" opacity="0.8"/>
+    <text x="138" y="26" font-family="'Lato', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Joinville</text>
+    <text x="138" y="42" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="700" fill="#B8CADB">AGORA</text>
+    <text x="138" y="80" font-family="'Lato', sans-serif" font-size="46" font-weight="700" fill="#FFFFFF">21°</text>
+    <text x="138" y="99" font-family="'Lato', sans-serif" font-size="12" font-weight="500" fill="#DDE7F2">Máx 28° • Mín 21°</text>
+    <text x="138" y="109" font-family="'Arial', sans-serif" font-size="7" fill="#8295A8">Clima: Open-Meteo · CC BY 4.0</text>
+  </g>
+  <text x="848" y="260" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0D2F0">• Anel Ciano Elétrico #00E5FF (3dp) padrão PhilcoOS</text>
+  <text x="848" y="278" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0D2F0">• Fundo intensificado em grafite marinho (#26303E)</text>
+  <text x="848" y="296" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0D2F0">• Contraste excelente para visualização a 3 metros</text>
+  <text x="848" y="314" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0D2F0">• Zero trap de foco: navegação D-pad 100% preservada</text>
+
+  <!-- Bottom Specification Box -->
+  <rect x="48" y="390" width="1184" height="305" rx="12" fill="#101722" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="68" y="416" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="14" fill="#00E5FF">ESPECIFICAÇÃO DE ENGENHARIA PARA CODEX (MainActivity.java)</text>
+  <line x1="68" y1="428" x2="1212" y2="428" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <text x="68" y="450" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="12" fill="#FFE664">CONTAINER &amp; PAINEL ESQUERDO</text>
+  <text x="68" y="474" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Pegada do Card: <tspan fill="#FFFFFF">360dp × 112dp (inalterado)</tspan></text>
+  <text x="68" y="498" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Padding Card: <tspan fill="#FFFFFF">dp(12), dp(6), dp(12), dp(6)</tspan></text>
+  <text x="68" y="522" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Raio dos Cantos: <tspan fill="#FFFFFF">dp(20) [smooth pill shape]</tspan></text>
+  <text x="68" y="546" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">conditionPanel: <tspan fill="#FFFFFF">Largura FIXA dp(118), -1</tspan></text>
+  <text x="68" y="570" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">  (Eliminar weight): <tspan fill="#FFFFFF">remove weight 1f excessivo</tspan></text>
+  <text x="68" y="594" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">weatherDescView: <tspan fill="#FFFFFF">15sp, #FFFFFF, Medium, shadow</tspan></text>
+  <text x="68" y="618" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">weatherGlyph: <tspan fill="#FFFFFF">dp(66) × dp(66), FIT_CENTER</tspan></text>
+
+  <text x="450" y="450" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="12" fill="#FFE664">PAINEL DIREITO (HIERARQUIA APPLE)</text>
+  <text x="450" y="474" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">currentPanel: <tspan fill="#FFFFFF">0, -1, 1f (ocupa 210dp restantes)</tspan></text>
+  <text x="450" y="498" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Padding Interno: <tspan fill="#FFFFFF">currentPanel.setPadding(dp(8),0,0,0)</tspan></text>
+  <text x="450" y="522" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">cityView: <tspan fill="#FFFFFF">17sp, #FFFFFF, Medium, alt dp(22)</tspan></text>
+  <text x="450" y="546" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">nowLabel: <tspan fill="#FFFFFF">'AGORA' 9sp, #B8CADB, Bold, alt dp(12)</tspan></text>
+  <text x="450" y="570" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">temperatureView: <tspan fill="#FFFFFF">46sp, #FFFFFF, Lato Medium, alt dp(46)</tspan></text>
+  <text x="450" y="594" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">highLowView: <tspan fill="#FFFFFF">12sp, #DDE7F2, Medium, alt dp(16)</tspan></text>
+  <text x="450" y="618" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">attribution: <tspan fill="#FFFFFF">6.5sp, #8295A8, Open-Meteo, alt dp(9)</tspan></text>
+
+  <text x="840" y="450" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="12" fill="#FFE664">ESTILO, CORES &amp; REGRAS</text>
+  <text x="840" y="474" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Gradiente Repouso: <tspan fill="#FFFFFF">0xFF454B53 -> 0xFF6C7580</tspan></text>
+  <text x="840" y="498" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Borda Repouso: <tspan fill="#FFFFFF">1dp stroke, cor 0x44FFFFFF</tspan></text>
+  <text x="840" y="522" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Gradiente Focado: <tspan fill="#FFFFFF">0xFF26303E -> 0xFF3E4B5E</tspan></text>
+  <text x="840" y="546" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Anel de Foco: <tspan fill="#FFFFFF">3dp stroke, cor #00E5FF (Ciano)</tspan></text>
+  <text x="840" y="570" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Formato Temp: <tspan fill="#FFFFFF">21° (sem 'C' colado, padrão Apple)</tspan></text>
+  <text x="840" y="594" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Formato Máx/Mín: <tspan fill="#FFFFFF">'Máx ' + max + '° • Mín ' + min + '°'</tspan></text>
+  <text x="840" y="618" font-family="'Segoe UI', sans-serif" font-size="12" fill="#A0B4CD">Acentos Corretos: <tspan fill="#FFFFFF">'Mín' com acento agudo no í</tspan></text>
+</svg>

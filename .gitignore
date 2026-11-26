@@ -1,0 +1,16 @@
+.toolchain/
+.gradle/
+**/build/
+output/releases/
+output/backups/
+output/captures/
+firmware/
+*.apk
+*.jks
+*.keystore
+keystore.properties
+local.properties
+*.bin
+*.img
+*.7z
+*.bak

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <!-- Background Dimmer -->
+    <linearGradient id="bgDim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04070D" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#020408" stop-opacity="0.90"/>
+    </linearGradient>
+
+    <!-- Side Panel Glass Gradient -->
+    <linearGradient id="panelGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0C1527" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#080E1C" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <!-- Slider Track -->
+    <rect id="sliderTrack" x="0" y="0" width="280" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.16"/>
+
+    <!-- Frosted Border Left -->
+    <linearGradient id="panelBorder" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Dimmed Home Background -->
+  <rect width="1280" height="720" fill="#060B14"/>
+  <rect width="1280" height="720" fill="url(#bgDim)"/>
+
+  <!-- Left: Visible Home Context (Dimmed Clock & Dock) -->
+  <g transform="translate(64, 52)" opacity="0.35">
+    <text x="0" y="68" font-family="Roboto, sans-serif" font-weight="500" font-size="74" fill="#FFFFFF">05:45</text>
+    <text x="4" y="98" font-family="Roboto, sans-serif" font-weight="400" font-size="18" fill="#B0BEC5">Sexta-feira, 21 de Novembro</text>
+  </g>
+
+  <!-- 2. Quick Control Center Glass Modal Sheet (Sliding from Right: Width 420px, Height 720px) -->
+  <g transform="translate(860, 0)">
+    <!-- Glass Sheet Body -->
+    <rect width="420" height="720" fill="url(#panelGlass)"/>
+    <!-- Frosted Left Rim -->
+    <line x1="0" y1="0" x2="0" y2="720" stroke="url(#panelBorder)" stroke-width="2"/>
+
+    <!-- Panel Title Header -->
+    <g transform="translate(48, 56)">
+      <text x="0" y="24" font-family="Roboto, sans-serif" font-weight="700" font-size="22" fill="#FFFFFF" letter-spacing="0.5">Controle Rápido</text>
+      <text x="0" y="46" font-family="Roboto, sans-serif" font-size="13" fill="#80DEEA">Realtek RTD2984 • Hardware Live</text>
+    </g>
+
+    <!-- Control 1: Master Volume (PlayingSource Volume 2 / 100) -->
+    <g transform="translate(48, 140)">
+      <!-- Label & Current Value -->
+      <text x="0" y="0" font-family="Roboto, sans-serif" font-weight="500" font-size="15" fill="#E0E0E0">Volume da TV</text>
+      <text x="320" y="0" font-family="Roboto, sans-serif" font-weight="700" font-size="16" fill="#00E5FF" text-anchor="end">2%</text>
+      <!-- Track & Progress Fill -->
+      <rect x="0" y="16" width="320" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.14"/>
+      <rect x="0" y="16" width="16" height="8" rx="4" fill="#00E5FF"/>
+      <!-- Slider Thumb (Focused D-pad Item) -->
+      <circle cx="16" cy="20" r="10" fill="#00E5FF" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="0" y="42" font-family="Roboto, sans-serif" font-size="12" fill="#78909C">AudioManager.setStreamVolumeForL4300</text>
+    </g>
+
+    <!-- Control 2: Mute / Ativar Som (Toggle Button) -->
+    <g transform="translate(48, 220)">
+      <rect width="320" height="48" rx="14" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.5"/>
+      <!-- Volume Mute Icon -->
+      <path d="M 24,18 L 28,18 L 34,13 L 34,35 L 28,30 L 24,30 Z M 38,20 L 46,28 M 46,20 L 38,28" stroke="#EF5350" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <text x="56" y="30" font-family="Roboto, sans-serif" font-weight="500" font-size="15" fill="#FFFFFF">Silenciar (Mudo)</text>
+      <text x="300" y="30" font-family="Roboto, sans-serif" font-size="13" fill="#90A4AE" text-anchor="end">Desativado</text>
+    </g>
+
+    <!-- Control 3: Picture Brightness (Brilho da Imagem 50 / 100) -->
+    <g transform="translate(48, 305)">
+      <text x="0" y="0" font-family="Roboto, sans-serif" font-weight="500" font-size="15" fill="#E0E0E0">Brilho da Imagem</text>
+      <text x="320" y="0" font-family="Roboto, sans-serif" font-weight="700" font-size="16" fill="#FFB74D" text-anchor="end">50%</text>
+      <rect x="0" y="16" width="320" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.14"/>
+      <rect x="0" y="16" width="160" height="8" rx="4" fill="#FFB74D"/>
+      <circle cx="160" cy="20" r="8" fill="#FFB74D" stroke="#FFFFFF" stroke-width="1.5"/>
+      <text x="0" y="42" font-family="Roboto, sans-serif" font-size="12" fill="#78909C">TvManager.setBrightness(50)</text>
+    </g>
+
+    <!-- Control 4: Panel Backlight (Luz de Fundo LED 100 / 100) -->
+    <g transform="translate(48, 390)">
+      <text x="0" y="0" font-family="Roboto, sans-serif" font-weight="500" font-size="15" fill="#E0E0E0">Backlight do Painel</text>
+      <text x="320" y="0" font-family="Roboto, sans-serif" font-weight="700" font-size="16" fill="#81C784" text-anchor="end">100%</text>
+      <rect x="0" y="16" width="320" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.14"/>
+      <rect x="0" y="16" width="320" height="8" rx="4" fill="#81C784"/>
+      <circle cx="312" cy="20" r="8" fill="#81C784" stroke="#FFFFFF" stroke-width="1.5"/>
+      <text x="0" y="42" font-family="Roboto, sans-serif" font-size="12" fill="#78909C">TvManager.setBacklight(100)</text>
+    </g>
+
+    <!-- Control 5: System Settings Shortcut Button -->
+    <g transform="translate(48, 480)">
+      <rect width="320" height="52" rx="14" fill="#1A73E8" fill-opacity="0.25" stroke="#1A73E8" stroke-width="1.5"/>
+      <!-- Gear Icon -->
+      <circle cx="26" cy="26" r="6" fill="none" stroke="#64B5F6" stroke-width="2"/>
+      <path d="M 26,16 L 26,19 M 26,33 L 26,36 M 16,26 L 19,26 M 33,26 L 36,26" stroke="#64B5F6" stroke-width="2" stroke-linecap="round"/>
+      <text x="46" y="31" font-family="Roboto, sans-serif" font-weight="500" font-size="15" fill="#FFFFFF">Configurações do Android TV</text>
+      <text x="46" y="47" font-family="Roboto, sans-serif" font-size="11" fill="#90CAF9">com.android.settings/.Settings</text>
+    </g>
+
+    <!-- D-pad Instructions & Exit Indicator -->
+    <g transform="translate(48, 640)">
+      <text x="0" y="0" font-family="Roboto, sans-serif" font-size="12" fill="#78909C">▲ ▼ Navegar pelos ajustes</text>
+      <text x="0" y="18" font-family="Roboto, sans-serif" font-size="12" fill="#78909C">◄ ► Ajustar valor | [VOLTAR] Fechar painel</text>
+    </g>
+  </g>
+</svg>
